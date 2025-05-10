@@ -1,0 +1,65 @@
+body {
+    font-family: monospace;
+}
+ul {
+    font-family: Helvetica;
+}
+li {
+    list-style: circle;
+}
+.list {
+    list-style: square;
+}
+
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Estilo base do botão */
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer; /* Adicionado: muda o cursor para mãozinha */
+}
+.btn:focus {
+    outline-style: none;
+}
+
+/* Tema claro */
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/* Tema escuro */
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* Aplicar variáveis ao conteúdo */
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+body {
+    background: var(--bg);
+}
+
+/* Estilo de botão com base no tema */
+.light-theme .btn,
+.dark-theme .btn {
+    background-color: var(--btnBg);
+    color: var(--btnFontColor);
+}
